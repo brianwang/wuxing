@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block title %}出牌{% endblock %}
+{% block content %}
+<object type="application/x-shockwave-flash"
+data="/swf/socket.swf" width="1" height="1" id="socketswf"style="pointer-events:none;">
+<param name="wmode" value="transparent"/>
+<param name="movie" value="/swf/socket.swf"/>
+<param name="FlashVars" value="readyName=socket.readyHandler&amp;connetName=socket.connectHandler&amp;socketDataName=socket.ondata&amp;closeName=socket.close&amp;ioErrorName=socket.ioErrorHandler&amp;securityName=socket.securityErrorHandler"/>
+</object>
+<div class="row">
+    <h2>对手牌</h2>
+    <a href="#" class="button gamebegin" uid=1> 开始游戏</a>
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+        {% for card in playercards %}
+        <li>
+            <a href="#" class="card"></a>
+            <p style="color: black;">攻击力: {{ card.attack }}</p>
+            <p style="color: black;"> 法力值: {{ card.fashu }}</p>
+            <p style="color: black;"> 防御: {{ card.defend }}</p>
+            <p style="color: black;"> 消耗: {{ card.xiaohao }}</p>
+            <p style="color: black;"> 技能: {{ card.attack }}</p>
+            <a href="#" class="button"> 出牌</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <hr/>
+    <h2>出牌区</h2>
+    <hr/>
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+        {% for card in palyingcards %}
+        <li>
+            <a href="#" class="card"></a>
+            <p style="color: black;">攻击力: {{ card.attack }}</p>
+            <p style="color: black;"> 法力值: {{ card.fashu }}</p>
+            <p style="color: black;"> 防御: {{ card.defend }}</p>
+            <p style="color: black;"> 消耗: {{ card.xiaohao }}</p>
+            <p style="color: black;"> 技能: {{ card.attack }}</p>
+            <a href="#" class="button"> 出牌</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <h2>我的牌</h2>
+    <a href="javascript:;" class="button gamebegin" uid=2>准备</a>
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+        {% for card in mycards %}
+        <li>
+            <a href="#" class="card"></a>
+            <p style="color: black;">攻击力: {{ card.attack }}</p>
+            <p style="color: black;"> 法力值: {{ card.fashu }}</p>
+            <p style="color: black;"> 防御: {{ card.defend }}</p>
+            <p style="color: black;"> 消耗: {{ card.xiaohao }}</p>
+            <p style="color: black;"> 技能: {{ card.attack }}</p>
+            <a href="#" class="button">出牌</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<script type="text/javascript" src="/public/js/main.js"></script>
+{% endblock %}

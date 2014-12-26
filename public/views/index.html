@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block title %}出牌{% endblock %}
+{% block content %}
+<form id="f_login">
+    <div class="row">
+        <div class="medium-2 columns">
+            用户名
+        </div>
+        <div class="medium-10 columns end">
+            <input type="text" name="username"/>
+        </div>
+        <div class="row">
+            <div class="medium-2 columns">
+                密码
+            </div>
+            <div class="medium-10 columns end">
+                <input type="password" name="password"/>
+            </div>
+        </div>
+        <div class="row">
+            <a href="javascript:;", id="login"> 登录</a>
+            <a href="/register"> 注册</a>
+        </div>
+    </div>
+</form>
+<script type="text/javascript" src="/public/js/index.js"></script>
+{% endblock %}

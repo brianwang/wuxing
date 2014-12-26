@@ -1,0 +1,37 @@
+a.room,a.card{
+    width: 280px;
+    height: 300px;
+    display: block;
+}
+ul.roomlist li{
+    float: left;
+}
+a.card{
+    width: 200px;
+    height: 250px;
+    background: #009933;
+    padding-top: 25px;
+}
+.card p{
+    text-align: center;
+}
+
+a.card.gold{
+    background: #FFFF00;
+}
+
+a.card.wood{
+    background: #339966;
+}
+
+.card.water{
+    background: #006699;
+}
+
+.card.fire{
+    background: #FF3300;
+}
+
+.card.mud{
+    background: #333300;
+}

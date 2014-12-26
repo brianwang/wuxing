@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <meta http-equiv="content-style-type" content="text/css"/>
+        <meta http-equiv="content-scripte-type", content="text/javascript"/>
+        <title>{% block title %}首页{% endblock %}</title>
+        <link type="text/css" rel="stylesheet" href="/css/base.css"/>
+        <link type="text/css" rel="stylesheet" href="/css/normalize.css"/>
+        <link type="text/css" rel="stylesheet" href="/css/foundation.css" />
+        <link type="text/css" rel="stylesheet" href="/css/font-awesome.min.css"/>
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/jquery-serializeForm/dist/jquery-serializeForm.js"></script>
+        <script src="bower_components/foundation/js/foundation.js"></script>
+    </head>
+    <body>
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+                <li class="name">
+                    <h1>
+                    <a href="#">
+                    Top Bar Title
+                    </a>
+                    </h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+            </ul>
+            <section class="top-bar-section">
+            </section>
+        </nav>
+        <div class="row">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <footer class="row">
+            {% block footer %}
+            <div class="large-12 columns"><hr/>
+                <div class="row">
+                    <div class="large-6 columns">
+                        <p>© Copyright no one at all. Go to town.</p>
+                    </div>
+                    <div class="large-6 columns">
+                        <ul class="inline-list right">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
+        </footer>
+    </body>
+</html>

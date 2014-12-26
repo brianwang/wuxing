@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block title %}出牌{% endblock %}
+{% block content %}
+<div class="row">
+    <dl class="tabs" data-tab>
+        {% for attr in attrs %}
+        <dd><a href="#{{ attr.value }}">{{ attr.name }}</a></dd>
+        {% endfor %}
+    </dl >
+    <div class="tabs-content">
+        <div class="content active" id="fire">
+            <p>火</p>
+        </div>
+        <div class="content" id="wood">
+            <p>木</p>
+        </div>
+        <div class="content" id="warter">
+            水
+        </div>
+        <div class="content" id="gold">
+            金
+        </div>
+        <div class="content" id="mood">
+            土
+        </div>
+    </div>
+</div>
+<div class="row">
+    <form action="/card/add" method="post" id="form_addcard">
+        <div class="row">
+            牌名：<input type="text" name="name" placeholder="牌的名字">
+        </div>
+        <div class="row">
+            攻击：<input type="text" name="attack" placeholder="攻击力">
+        </div>
+        <div class="row">
+            防守：<input type="text" name="defend" placeholder="防守">
+        </div>
+        <div class="row">
+            法术：<input type="text" name="spell" placeholder="法术">
+        </div>
+        <div class="row">
+            体力：<input type="text" name="ecv" placeholder="体力消耗值">
+        </div>
+        <div class="row">
+            基本属性
+            <select name="attr">
+                {% for att in attrs %}
+                <option value={{ att.value }}> {{ att.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <a href="javascript:;">添加技能</a>
+        <a class="button" id="btn_addcard">添加牌</a>
+    </form>
+    <div class="row">
+        <select>
+            {% for att in attrs %}
+            <option value={{ att.value }}> {{ att.name }}</option>
+            {% endfor %}
+        </select>
+        <select>
+            <option>时间</option>
+            <option>强度</option>
+        </select>
+        <input type="text" name="v"/>
+    </div>
+</div>
+<script type="text/javascript" src="/js/addcard.js"></script>
+{% endblock %}

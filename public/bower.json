@@ -1,0 +1,22 @@
+{
+  "name": "wuxingling",
+  "version": "0.0.1",
+  "authors": [
+    "wang xiang yu <wangxydlut@gmail.com>"
+  ],
+  "description": "wuxingling web client",
+  "main": "app.js",
+  "keywords": [
+    "wuxing",
+    "ling",
+    "games"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}出牌{% endblock %}
+{% block content %}
+<object type="application/x-shockwave-flash"
+data="/swf/socket.swf" width="1" height="1" id="socketswf"style="pointer-events:none;">
+<param name="wmode" value="transparent"/>
+<param name="movie" value="/swf/socket.swf"/>
+<param name="FlashVars" value="readyName=socket.readyHandler&amp;connetName=socket.connectHandler&amp;socketDataName=socket.ondata&amp;closeName=socket.close&amp;ioErrorName=socket.ioErrorHandler&amp;securityName=socket.securityErrorHandler"/>
+</object>
+<div class="row">
+    <h2>房间列表</h2>
+    <a href="#"  class="button gamebegin" uid=1> 开始游戏</a>
+    <ul class="">
+
+    </ul>
+</div>
+<script type="text/javascript" src="/public/js/main.js"></script>
+{% endblock %}
